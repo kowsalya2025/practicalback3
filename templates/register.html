@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm p-4 mx-auto" style="max-width: 500px; background-color: #ffffff;">
+    <h3 class="card-title mb-4 text-center text-primary">Student Registration</h3>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.name.label(class="form-label") }}
+            {{ form.name(class="form-control", placeholder="Enter full name") }}
+        </div>
+        <div class="mb-3">
+            {{ form.email.label(class="form-label") }}
+            {{ form.email(class="form-control", placeholder="Enter email") }}
+        </div>
+        <div class="mb-3">
+            {{ form.password.label(class="form-label") }}
+            {{ form.password(class="form-control", placeholder="Enter password") }}
+        </div>
+        <div class="d-grid">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+</div>
+{% endblock %}
+

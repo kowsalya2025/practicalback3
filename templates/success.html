@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card shadow-sm p-4 mx-auto text-center" style="max-width: 500px; background-color: #ffffff;">
+    <h3 class="text-success mb-3">Registration Successful!</h3>
+    <p>Thank you for registering.</p>
+    <p>Your email <strong>{{ email }}</strong> will receive a notification upon approval.</p>
+    <a href="{{ url_for('register') }}" class="btn btn-primary mt-3">Register Another Student</a>
+</div>
+{% endblock %}
+
